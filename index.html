@@ -8,8 +8,12 @@
     <!-- Google Icon CDN -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,0"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    /> -->
     <!-- Google Font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,11 +21,13 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- TailwindCSS Config-->
     <script>
       tailwind.config = {
         theme: {
@@ -32,17 +38,145 @@
             },
             fontFamily: {
               display: ['"Manrope", sans-serif'],
+              logo: ['"Josefin Sans", sans-serif'],
             },
           },
         },
       };
     </script>
+
+    <!-- TailwindCSS Utilities -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .d-fr {
+          @apply flex items-center justify-start gap-4;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-display w-full m-0 p-0">
     <header>
-      <nav></nav>
+      <nav
+        class="w-full flex h-16 items-center justify-between p-4 bg-gray-300 relative"
+      >
+        <button
+          title="account"
+          class="navBtn md:hidden px-1 py-1 flex items-center justify-start flex-row text-gray-800 w-28 h-10"
+        >
+          <span
+            class="material-symbols-rounded drop-shadow-md text-4xl leading-8"
+          >
+            account_circle
+          </span>
+          Tawhid
+          <span class="material-symbols-rounded"> keyboard_arrow_down </span>
+        </button>
+        <div class="flex items-center justify-start gap-12">
+          <a
+            href="/"
+            class="logo flex items-center justify-between flex-row gap-2 text-2xl font-logo font-extrabold text-gray-900"
+          >
+            <div class="relative">
+              <span
+                class="material-symbols-rounded absolute text-[1.2rem] top-[-7px] rotate-[-24deg] z-0"
+              >
+                star
+              </span>
+              <span
+                class="material-symbols-rounded absolute text-[1rem] bottom-[-8px]"
+              >
+                star
+              </span>
+
+              <img
+                class="m-w-full w-6 ml-2 -rotate-[25deg] drop-shadow-lg z-10"
+                src="./tea-house-resources-main/images/tea-1.png"
+              />
+
+              <span
+                class="material-symbols-rounded absolute text-[0.8rem] top-[3px] right-[-7px]"
+              >
+                star
+              </span>
+              <span
+                class="material-symbols-rounded absolute text-[0.8rem] top-[15px] right-[-3px] rotaet-[46deg]"
+              >
+                star
+              </span>
+              <span
+                class="material-symbols-rounded absolute text-[0.8rem] top-[24px] right-[7px]"
+              >
+                star
+              </span>
+            </div>
+            <span>Tea House</span>
+          </a>
+        </div>
+        <div
+          class="nav-btns flex items-center justify-end gap-3 text-gray-200 text-center"
+        >
+          <button
+            title="account"
+            class="navBtn md:flex px-1 py-1 hidden items-center justify-start flex-row text-gray-800 w-28 h-10"
+          >
+            <span
+              class="material-symbols-rounded drop-shadow-md text-4xl leading-8"
+            >
+              account_circle
+            </span>
+            Tawhid
+            <span class="material-symbols-rounded"> keyboard_arrow_down </span>
+          </button>
+          <button
+            title="cart"
+            class="navBtn px-1 py-1 shadow-md bg-gray-400 rounded-full w-10 h-10 relative before:absolute before:block before:bg-red-600 before:content-['2'] before:top-[-7px] before:right-[-2px] before:rounded-full before:w-4 before:h-4 before:text-white before:font-medium before:text-xs before:shadow-md transition-colors ease-in-out before:hover:bg-red-500"
+          >
+            <span class="material-symbols-rounded text-3xl leading-9">
+              shopping_cart
+            </span>
+          </button>
+        </div>
+        <div
+          class="hidden-menu hidden absolute top-16 md:right-[2px] shadow-[-10px_11px_35px_-8px_rgba(0,0,0,0.5)] bg-gray-300 px-6 py-6 rounded-md"
+        >
+          <ul class="flex items-center flex-col gap-4 font-normal text-lg">
+            <li
+              class="w-52 py-2 px-2 d-fr transition-colors ease-in-out text-gray-700 hover:text-black cursor-pointer"
+            >
+              <span class="material-symbols-rounded"> home </span>
+              Home
+            </li>
+            <li
+              class="w-52 py-2 px-2 d-fr transition-colors ease-in-out text-gray-700 hover:text-black cursor-pointer"
+            >
+              <span class="material-symbols-rounded"> mobile_friendly </span>
+              Order Now
+            </li>
+            <li
+              class="w-52 py-2 px-2 d-fr transition-colors ease-in-out text-gray-700 hover:text-black cursor-pointer"
+            >
+              <span class="material-symbols-rounded"> phone_in_talk </span>
+              Contact Us
+            </li>
+            <li
+              class="w-52 py-2 px-2 d-fr transition-colors ease-in-out text-gray-700 hover:text-black cursor-pointer"
+            >
+              <span class="material-symbols-rounded"> home_pin </span>
+              Your Location
+            </li>
+            <li
+              class="w-52 py-2 px-2 d-fr transition-colors ease-in-out text-gray-700 hover:text-black cursor-pointer"
+            >
+              <span class="material-symbols-rounded"> contact_support </span>
+              Help Center
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <main></main>
+
     <footer></footer>
   </body>
 </html>
