@@ -51,6 +51,12 @@
         .d-fr {
           @apply flex items-center justify-start gap-4;
         }
+        .title {
+          @apply text-4xl font-extrabold text-gray-800;
+        }
+        .description {
+          @apply text-base font-semibold text-gray-600;
+        }
       }
     </style>
   </head>
@@ -174,7 +180,7 @@
         </div>
       </nav>
       <div
-        class="hero-section flex items-start justify-between flex-col w-full px-10 md:px-20 py-10 lg:flex-row"
+        class="hero-section flex items-start justify-between flex-col w-full px-10 md:px-28 py-10 lg:flex-row"
       >
         <div class="title-btns w-full lg:w-1/2 leading-6">
           <h1
@@ -215,7 +221,48 @@
       </div>
     </header>
 
-    <main></main>
+    <main class="w-full px-28">
+      <div class="featured_products py-6 w-full leading-6">
+        <h2 class="title text-center">Our Featured Products</h2>
+        <p class="description w-4/5 text-center py-6 mx-auto">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly believable.
+        </p>
+        <div
+          class="products w-full flex items-center justify-between flex-row gap-4 px-4 my-16 text-center"
+        >
+          <section class="flex items-center justify-center flex-col gap-3">
+            <img class="mb-4" src="./images/tea-1.png" alt="Milk Tea" />
+            <h3 class="text-2xl font-bold">Milk Tea</h3>
+            <p class="description w-3/4">
+              Creamer could be replaced by fresh milk
+            </p>
+          </section>
+          <section class="flex items-center justify-center flex-col gap-3">
+            <img src="./images/tea-2.png" alt="Black Tea" />
+            <h3 class="text-2xl font-bold">Black Tea</h3>
+            <p class="description w-3/4">
+              Creamer could be replaced by fresh milk
+            </p>
+          </section>
+          <section class="flex items-center justify-center flex-col gap-3">
+            <img src="./images/tea-3.png" alt="Lemon Tea" />
+            <h3 class="text-2xl font-bold">Lemon Tea</h3>
+            <p class="description w-3/4">
+              Creamer could be replaced by fresh milk
+            </p>
+          </section>
+          <section class="flex items-center justify-center flex-col gap-3">
+            <img src="./images/tea-4.png" alt="Green Tea" />
+            <h3 class="text-2xl font-bold">Green Tea</h3>
+            <p class="description w-3/4">
+              Creamer could be replaced by fresh milk
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
 
     <footer></footer>
   </body>
