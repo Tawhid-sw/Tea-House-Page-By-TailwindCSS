@@ -6,14 +6,14 @@
     <title>Tea House</title>
 
     <!-- Google Icon CDN -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,0"
-    />
     <!-- <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,0"
     /> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
     <!-- Google Font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,7 +55,7 @@
     </style>
   </head>
   <body class="font-display w-full m-0 p-0">
-    <header>
+    <header class="w-full">
       <nav
         class="w-full flex h-16 items-center justify-between p-4 bg-gray-300 relative"
       >
@@ -90,7 +90,7 @@
 
               <img
                 class="m-w-full w-6 ml-2 -rotate-[25deg] drop-shadow-lg z-10"
-                src="./tea-house-resources-main/images/tea-1.png"
+                src="./images/tea-1.png"
               />
 
               <span
@@ -173,6 +173,46 @@
           </ul>
         </div>
       </nav>
+      <div
+        class="hero-section flex items-start justify-between flex-col w-full px-10 md:px-20 py-10 lg:flex-row"
+      >
+        <div class="title-btns w-full lg:w-1/2 leading-6">
+          <h1
+            class="font-extrabold w-full text-4xl md:text-6xl text-gray-800 leading-[1.3333]"
+          >
+            It's good <br />
+            tea time at The <br />
+            Tea House
+          </h1>
+          <p class="text-lg md:text-sm text-gray-500 w-3/4 font-medium py-7">
+            Tea and Botanical Solutions Supplier Give Optimum Satisfaction To
+            Your Taste Buds.
+          </p>
+          <button
+            class="flex items-center gap-2 bg-gradient-to-r from-orange-400 to-orange-800 rounded-lg text-white text-[1.2222rem] font-semibold py-4 px-3"
+          >
+            Explore More <img src="./images/arrow.png" />
+          </button>
+        </div>
+        <div class="imgs w-full lg:w-1/2 relative">
+          <img class="block max-w-full" src="./images/banner.png" />
+          <div
+            class="card absolute bottom-3 left-6 rounded-lg shadow-lg flex items-center gap-2 w-1/2 bg-gray-200 px-3 py-4 font-medium leading-4"
+          >
+            <span
+              class="material-symbols-rounded text-yellow-500 drop-shadow-lg text-5xl"
+            >
+              grade
+            </span>
+            <p
+              class="first-line:font-extrabold first-line:text-2xl first-line:text-black text-gray-500 text-sm w-fit"
+            >
+              5.00 <br />
+              Trust Pilot Ratings
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main></main>
